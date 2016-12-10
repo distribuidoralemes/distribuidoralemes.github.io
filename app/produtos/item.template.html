@@ -1,0 +1,106 @@
+<br><br>
+
+<div layout="row">
+    <div ng-repeat="item in perfumesItem.items" class="item" ng-click="perfumesItem.visualizar(item)">
+
+        <img ng-src="{{item.image}}" alt="{{item.name}}" style="width:210px; height: 210px;">
+
+        <br>
+
+        <span class="item-title">{{item.name}}</span>
+
+        <div class="faixa">VALOR SOB CONSULTA</div>
+    </div>
+</div>
+
+<div class="background" ng-show="perfumesItem.itemSelecionado"></div>
+<div layout="row" ng-show="perfumesItem.itemSelecionado" class="modal">
+    <div style="position: relative;text-align: center;">
+        <img src="{{perfumesItem.itemSelecionado.image}}" alt="{{perfumesItem.itemSelecionado.name}}">
+        <div class="faixa" style="top: 0;margin: 0;">VALOR SOB CONSULTA</div>
+    </div>
+    
+    <div class="close" ng-click="perfumesItem.itemSelecionado = undefined;">
+        <svg viewBox="0 0 180 180" class="s93mediaZoom_svgButtonClose" data-reactid=".0.$siteAspectsContainer.$appPartZoomComp.0.0.0.0.0"><path d="M5 5 L175 175 M175 5 L5 175"></path></svg>
+    </div>
+
+    <div layout="column" style="margin-left:20px;" layout-align="space-between start">
+        <div>
+            <h2 style="margin-top: 0;">{{perfumesItem.itemSelecionado.name}}</h2>
+
+            <span>{{perfumesItem.perfume.name}}</span>
+
+            <br><br>
+            <span>{{perfumesItem.perfume.description}}</span>
+        </div>
+        <div>
+            <div ng-repeat="type in perfumesItem.itemSelecionado.types">{{type.description}}</div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    .close {
+        display: inline-block;
+        height: 25px;
+        background: #fff url(https://static.parastorage.com/services/skins/2.1229.56/images/wysiwyg/core/themes/base/close.gif) no-repeat 50% 50%;
+        cursor: pointer;
+        position: fixed;
+        width: 25px;
+        right: 50%;
+        margin-right: -445px;
+        margin-top: -20px;
+    }
+
+    .modal {
+        background: #fff;
+        width: 840px;
+        height: 475px;
+        margin-top: 112.5px;
+        padding: 20px;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 50%;
+        margin-left: -420px;
+    }
+
+    .background {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .faixa {
+        position: absolute;
+        left: 0;
+        background: #F25F65;
+        right: 0;
+        top: 50%;
+        margin-top: -9px;
+        font-family: sans-serif;
+    }
+
+    .item-title {
+        font: normal normal 13px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif;
+        color: #2C2C2B;
+    }   
+
+    .item {
+        margin: 10px;
+        position:relative;
+        width: 225px;
+        text-align: center;
+        padding: 10px;
+    }
+    .item:hover {
+        background: #f5f5f5;
+        cursor:pointer;
+    }
+</style>
+
+<br><br>

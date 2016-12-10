@@ -1,0 +1,16 @@
+
+<h1>Slide de fotos</h1>
+
+<section style="padding: 50px 0" layout="column" layout-align="center center">
+	<div class="home__newslatter" layout="row" layout-align="space-between center">
+		<span>Cadastre seu e-mail e receba informações semanais</span>
+		<input type="text" placeholder="Seu e-mail" ng-model="home.email">
+		<button ng-click="home.assinarNovidades()">Assine Agora</button>
+	</div>
+	
+	<br><br>
+
+	<div ng-show="home.success" style="color: #BADA55;font: normal normal normal 10px/1.4em 'Open Sans',sans-serif;">
+		Parabéns! Sua assinatura foi concluida
+	</div>
+</section>

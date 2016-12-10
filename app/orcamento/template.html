@@ -1,0 +1,70 @@
+<div style="border-bottom: 2px dashed rgba(164, 164, 164, 1)">
+	<h2 style="font-size: 24px;">
+		<span style="font-family:helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;">
+			<span style="font-weight:bold;">ORÇAMENTO</span>
+		</span>
+	</h2>
+</div>
+
+
+<br><br><br><br>
+
+<style>
+	input, textarea {
+		font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+		background-color: rgba(205, 205, 201, 1);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border: 0px solid rgba(255, 255, 255, 1);
+		color: #000000;
+		margin: 0 0 5px;
+		width: 100%;
+		border-radius: 5px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+		padding: 5px;
+	}
+
+	button.enviar {
+		background-color: rgba(44, 44, 43, 1);
+		font: normal normal normal 15px/1.4em 'open sans',sans-serif;
+		border: 0;
+		color: #FFFFFF;
+		cursor: pointer;
+		float: right;
+		margin: 0;
+		max-width: 35%;
+		border-radius: 5px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+		padding: 5px;
+	}
+
+	::-webkit-input-placeholder {color: #000; }
+	:-moz-placeholder { color: #000;  }
+	::-moz-placeholder { color: #000;  }
+	:-ms-input-placeholder {  color: #000;  }
+</style>
+
+<div layout="row" layout-align="space-around center">
+
+	<div layout="column" style="width:480px;">
+		<input type="text" placeholder="Nome" ng-model="nome">
+		<input type="text" placeholder="Email" ng-model="email">
+		<input type="text" placeholder="Assunto" ng-model="assunto">
+		<textarea cols="30" rows="5" placeholder="Mensagem" ng-model="mensagem"></textarea>
+
+		<div layout="row">
+			<div style="flex: 1;color: #18CF13;padding-top: 7px;">
+				<span ng-show="sucesso">Seus detalhes foram enviados com sucesso!</span>
+			</div>
+			<button class="enviar" ng-click="sucesso = nome && email && assunto && mensagem">Enviar</button>
+		</div>
+	</div>
+
+	<div>
+		<img ng-src="/shared/images/atendimento-orcamento.png">
+	</div>
+
+</div>
+
+<br><br><br><br>
+

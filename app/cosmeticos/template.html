@@ -1,0 +1,45 @@
+<section layout="row" layout-align="start start" class="cosmeticos__container">
+	
+	<div class="cosmeticos__item" layout="column" layout-align="end center" ng-repeat="item in cosmeticos.items">
+		<img ng-src="{{item.image}}" alt="{{item.name}}">
+		<div layout="column" layout-align="center center">
+			<span>Conheça toda linha</span>
+			<span ng-bind="item.name"></span>
+			<hr>
+			<a href="#/cosmeticos/{{item.name}}">+ VEJA MAIS</a>
+		</div>
+	</div>
+
+</section>
+
+<style>
+	
+	.cosmeticos__container {
+		padding: 50px;
+	}
+
+	.cosmeticos__item {
+		margin: 0 10px;
+		width: 175px;
+    	height: 180px;
+	}
+
+	.cosmeticos__item > div {
+		margin-top: 14px;
+		width: 175px;
+		padding: 4px;
+		font-family: 'Open Sans', sans-serif;
+    	font-size: 12px;
+	}
+
+	.cosmeticos__item > div,
+	.cosmeticos__item > div a {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.cosmeticos__item > div hr {
+		width: 100%;
+	}
+
+</style>

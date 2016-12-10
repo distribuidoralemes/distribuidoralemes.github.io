@@ -1,0 +1,42 @@
+<section layout="row" layout-align="start end" class="perfumes__container" style="flex-wrap: wrap;">
+	
+	<div class="perfumes__item" layout="column" layout-align="end center" ng-repeat="item in perfumes.items">
+		<img ng-src="{{item.image}}" alt="{{item.name}}">
+		<div layout="column" layout-align="center center">
+			<span>Conheça toda linha</span>
+			<span ng-bind="item.name"></span>
+			<hr>
+			<a href="#/produtos/{{item.name}}">+ VEJA MAIS</a>
+		</div>
+	</div>
+
+</section>
+
+<br><br>
+
+<style>
+	.perfumes__item {
+		margin: 0 10px;
+		width: 175px;
+    	min-height: 180px;
+	}
+
+	.perfumes__item > div {
+		margin-top: 14px;
+		width: 175px;
+		padding: 4px;
+		font-family: 'Open Sans', sans-serif;
+    	font-size: 12px;
+	}
+
+	.perfumes__item > div,
+	.perfumes__item > div a {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.perfumes__item > div hr {
+		width: 100%;
+	}
+
+</style>

@@ -1,7 +1,147 @@
+<style>
+    #jssor_1 div img {
+        width: 88px !important;
+        height: 50px !important;
+    }
 
-<h1>Slide de fotos</h1>
+     /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
 
-<section style="padding: 50px 0" layout="column" layout-align="center center">
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('/shared/images/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+        .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+        .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+</style>
+
+<br><br>
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden;">
+            <div>
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_75024beaabf9499a87e2a0a33907e052.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_75024beaabf9499a87e2a0a33907e052.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_e950f12f240d4c24b31f3f90a9483ae9.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_e950f12f240d4c24b31f3f90a9483ae9.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_d65a6ab7bcf14e28a6699e0cc7d6f6fd.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_d65a6ab7bcf14e28a6699e0cc7d6f6fd.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_df07803178f9400580a62c1f50436350.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_df07803178f9400580a62c1f50436350.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_321b1bbc52d740da901b0bd533e7905f.jpg/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_321b1bbc52d740da901b0bd533e7905f.jpg" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_83fa2bf5c8e84c439d4e615ed17f7ce6.jpg/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_83fa2bf5c8e84c439d4e615ed17f7ce6.jpg" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_30216b5080ad4ea183104784af38c09e.jpg/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_30216b5080ad4ea183104784af38c09e.jpg" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_76760c83085d47b3b7875b7564063e02.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_76760c83085d47b3b7875b7564063e02.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_26919e84c16d4f6fa70d1f9fba6e4a99.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_26919e84c16d4f6fa70d1f9fba6e4a99.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_6422300316b5458f92a90cba10d018a1.png/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_6422300316b5458f92a90cba10d018a1.png" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_49e84b4e24ea44eaaed3bb482f86b274.jpg/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_49e84b4e24ea44eaaed3bb482f86b274.jpg" />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_9ec0c99606c44883acfec3002cbd59dd.jpg/v1/fill/w_88,h_50,al_c,q_80,usm_0.66_1.00_0.01/ec4353_9ec0c99606c44883acfec3002cbd59dd.jpg" />
+            </div>
+        </div>
+    </div>
+
+
+    <!---->
+    
+    <div id="jssor_2" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 500px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 500px; overflow: hidden;">
+            <div class="slide-middle" data-p="225.00" style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_4c98abee2ffe4b249152faee6cc7d28f.jpg/v1/fill/w_929,h_511,al_c,q_85,usm_0.66_1.00_0.01/ec4353_4c98abee2ffe4b249152faee6cc7d28f.webp" />
+            </div>
+            <div class="slide-middle" data-p="225.00" data-po="980px 55%" style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_47aa5294f4bd42d99ec57358356c97d8.jpg/v1/fill/w_716,h_511,al_c,lg_1,q_85/ec4353_47aa5294f4bd42d99ec57358356c97d8.webp" />
+            </div>
+            <div class="slide-middle" data-p="225.00" data-po="980px 55%" style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_7b573186ea0346d3adb87d175f2e0cff.jpg/v1/fill/w_979,h_490,al_c,q_85,usm_0.66_1.00_0.01/ec4353_7b573186ea0346d3adb87d175f2e0cff.webp" />
+            </div>
+            <div class="slide-middle" data-p="225.00" data-po="980px 55%" style="display: none;">
+                <img data-u="image" src="https://static.wixstatic.com/media/ec4353_5d93d6e6d0a042e0a3fb1885a8f26f38.jpg/v1/fill/w_801,h_511,al_c,q_85,usm_0.66_1.00_0.01/ec4353_5d93d6e6d0a042e0a3fb1885a8f26f38.webp" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+    </div>
+
+
+<section style="padding: 50px 0" layout="column" layout-align="center center" ng-init="home.init()">
 	<div class="home__newslatter" layout="row" layout-align="space-between center">
 		<span>Cadastre seu e-mail e receba informações semanais</span>
 		<input type="text" placeholder="Seu e-mail" ng-model="home.email">
